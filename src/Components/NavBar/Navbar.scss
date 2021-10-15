@@ -6,7 +6,38 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background: #210B2C;
     // background: ${(props) => props.theme.grey};
     z-index: 99;
     padding: 0.7rem 1.5rem;
+    
+    input {
+        width: 700px;
+        outline: none;
+        color: white;
+    }
+
+    .toggler {
+        display: none;
+    }
+
+    .logo {
+        span {
+            position: relative;
+            top: 1px;
+        }
+    }
+
+    .link-btn {
+        position: relative;
+        //top: 2px;
+        padding: 0.7rem 1.5rem;
+        background: #F43052;
+        color: white;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+}
 }

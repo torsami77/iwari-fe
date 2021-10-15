@@ -12,7 +12,35 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  background: #210B2C;
   z-index: 99;
   padding: 0.7rem 1.5rem;
+}
+
+.nav input {
+  width: 700px;
+  outline: none;
+  color: white;
+}
+
+.nav .toggler {
+  display: none;
+}
+
+.nav .logo span {
+  position: relative;
+  top: 1px;
+}
+
+.nav .link-btn {
+  position: relative;
+  padding: 0.7rem 1.5rem;
+  background: #F43052;
+  color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 /*# sourceMappingURL=Navbar.css.map */

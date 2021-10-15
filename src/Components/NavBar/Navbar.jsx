@@ -1,11 +1,24 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import Search from '../Gadgets/Search';
 import "./Navbar.css";
 
 
 const Navbar = () => {
     return (
-        <div className="wrapper">
-            I am Nav
+        <div className="nav">
+            <div className="logo flex-row">
+                <div className="toggler"></div>
+                <span>
+                    <Link to="/">Logo</Link>
+                </span>
+            </div>
+
+            <Search />
+
+            <Link to="" className="link-btn">
+                Sign Up
+            </Link>
         </div>
     )
 }
