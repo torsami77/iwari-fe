@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className="logo flex-row">
                 <div className="toggler"></div>
                 <span>
-                    <Link to="/">Logo</Link>
+                    <Link to="/" className="txt-logo" style={{ color: "white"}}>Logo</Link>
                 </span>
             </div>
 

@@ -8,7 +8,8 @@ const Wrapper = styled.div`
         padding: 0.4rem 1rem;
         border: 1px solid ${(props) => props.theme.darkGrey};
         height: 31px;
-        color: ${(props) => props.theme.primaryColor};
+        color: ${(props) => props.color};
+        border-radius: 5px;
     }
 
     @media screen and (max-width: 700px) {
@@ -21,11 +22,11 @@ const Wrapper = styled.div`
 const Search = () => {
     return (
         <>
-            <Wrapper>
+            <Wrapper color="white">
                 <input
                     className="search"
                     type="search"
-                    placeholder=""
+                    placeholder="Search"
                 />
             </Wrapper>
         </>

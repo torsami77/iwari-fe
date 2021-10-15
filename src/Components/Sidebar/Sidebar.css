@@ -23,18 +23,24 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem 0;
+  color: #565656;
+  padding: 1rem 0;
+  font-size: 14px;
   padding-left: 2.5rem;
   margin-bottom: 0.4rem;
 }
 
 .wrapper .icon:not(.hover-disable):hover {
-  background: #F43052;
+  color: #F43052;
   cursor: pointer;
 }
 
+.wrapper .icon span {
+  margin-left: 5px;
+}
+
 .wrapper .active div {
-  background: #F43052;
+  background: inherit;
   cursor: pointer;
 }
 
@@ -44,7 +50,97 @@
 
 .wrapper .active span {
   position: relative;
-  color: white;
+  color: #F43052;
   top: 1px;
+}
+
+.wrapper .line {
+  padding: 1.5rem 0;
+}
+
+.wrapper .line hr {
+  width: 83%;
+  float: right;
+}
+
+.wrapper .friends-list {
+  padding-left: 2.5rem;
+}
+
+.wrapper .friends-list h3 {
+  color: #F43052;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.wrapper .friends-list .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #ccc;
+  margin: .7rem 0;
+  height: 50px;
+  border-radius: 5px;
+  padding: .5rem 0;
+  background: #FEF4F7;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.wrapper .friends-list .friends .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  margin: .7rem 0;
+}
+
+.wrapper .friends-list .friends .list .l-img {
+  width: 15%;
+  height: 100%;
+  margin-right: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.wrapper .friends-list .friends .list .l-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.wrapper .friends-list .friends .list .l-description {
+  line-height: 15px;
+}
+
+.wrapper .friends-list .friends .list .l-description h2 {
+  font-size: 12px;
+  color: #210B2C;
+}
+
+.wrapper .friends-list .friends .list .l-description p {
+  font-size: 10px;
+  color: #B6B6B6;
 }
 /*# sourceMappingURL=Sidebar.css.map */

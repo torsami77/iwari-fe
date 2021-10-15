@@ -46,9 +46,13 @@
         color: #F43052;
         top: 1px;
     }
-    hr {
-        margin: 1.5rem 0;
-        padding-left: 2.5rem;
+
+    .line {
+        padding: 1.5rem 0;
+        hr {
+            width: 83%;
+            float: right;
+        }
     }
 
     .friends-list {
@@ -65,6 +69,7 @@
             justify-content: center;
             border: 1px solid #ccc;
             margin: .7rem 0;
+            height: 50px;
             border-radius: 5px;
             padding: .5rem 0;
             background: #FEF4F7;

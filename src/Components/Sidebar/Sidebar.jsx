@@ -64,11 +64,13 @@ const Sidebar = () => {
                     <span>My List</span>
                 </div>
             </NavLink>
-            <hr />
+            <div className="line">
+                <hr />
+            </div>
             <div className="friends-list">
                 <h3>friends</h3>
                 <div className="display">
-                    Empty Space
+                    {/* Empty Space */}
                 </div>
                 <div className="friends">
                     <FriendsCard/>
