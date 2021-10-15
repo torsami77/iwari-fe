@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { HomeIcon } from '../Icons/Home';
+import { FriendsCard } from '../Cards/Cards';
 // import {Home} from "@styled-icons/boxicons-regular/Home";
 import "./Sidebar.scss"
 
@@ -15,7 +16,7 @@ const Sidebar = () => {
             >
                 <div className="icon">
                     {/* Icon */}
-                    {/* <HomeIcon/> */}
+                    <HomeIcon/>
                     <span>Home</span>
                 </div>
             </NavLink>
@@ -26,6 +27,7 @@ const Sidebar = () => {
             >
                 <div className="icon">
                     {/* Icon */}
+                    <HomeIcon/>
                     <span>Live</span>
                 </div>
             </NavLink>
@@ -36,6 +38,7 @@ const Sidebar = () => {
             >
                 <div className="icon">
                     {/* Icon */}
+                    <HomeIcon/>
                     <span>Category</span>
                 </div>
             </NavLink>
@@ -46,6 +49,7 @@ const Sidebar = () => {
             >
                 <div className="icon">
                     {/* Icon */}
+                    <HomeIcon/>
                     <span>New/Popular</span>
                 </div>
             </NavLink>
@@ -56,6 +60,7 @@ const Sidebar = () => {
             >
                 <div className="icon">
                     {/* Icon */}
+                    <HomeIcon/>
                     <span>My List</span>
                 </div>
             </NavLink>
@@ -66,15 +71,12 @@ const Sidebar = () => {
                     Empty Space
                 </div>
                 <div className="friends">
-                    <div className="list">
-                        <div className="l-img">
-                            <img src="" alt="" />
-                        </div>
-                        <div className="l-description">
-                            <h2>Judie Winkie</h2>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
+                    <FriendsCard/>
+                    <FriendsCard/>
+                    <FriendsCard/>
+                    <FriendsCard/>
+                    <FriendsCard/>
+                    <FriendsCard/>
                 </div>
             </div>
         </div>
