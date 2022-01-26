@@ -2,13 +2,25 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import { authenticate } from "../../utils";
 
 export const login = createAsyncThunk(
-    "mediacreator/signup",
+    "user/signin",
+    async ({ payload, clearForm }) => {
+        const user = await authenticate("user/signin", payload);
+
+        if (user.token) {
+            clearForm();
+            return user;
+        }
+    }
+);
+
+export const signup = createAsyncThunk(
+    "user/signup",
     async({payload, clearForm}) => {
-        const user = await authenticate("mediacreator/signup", payload);
+        const user = await authenticate("user/signup", payload);
 
         if(user.token) {
             clearForm();
-            return user
+            return user;
         }
     }
 );
@@ -30,7 +42,7 @@ const userSlice = createSlice({
         },
     },
     extraReducers: {
-        [login.fulfilled]: (state, action) => {
+        [signup.fulfilled]: (state, action) => {
             state.data = action.payload || {};
         },
     },
