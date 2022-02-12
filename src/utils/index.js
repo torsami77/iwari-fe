@@ -8,6 +8,7 @@ export const client = async (endpoint, {body, ...configData} = {}) => {
         method: body ? "POST" : "GET",
         ...configData,
         header: {
+            'Access-Control-Allow-Origin' : '*',
             "Content-Type": "application/json",
             Accept: "application/json"
         },
@@ -36,20 +37,21 @@ export const client = async (endpoint, {body, ...configData} = {}) => {
 };
 
 export const authenticate = async (type, data) => {
-    const backendUrl = process.env.REACT_API_SERVER;
+    const backendUrl = "https://iwari-api.herokuapp.com/api";
+    console.log("Hit here")
 
     try {
-    const { data: token } = await client(`${backendUrl}/${type}`, {
-        body: data,
-    });
+        const { data: token } = await client(`${backendUrl}/${type}`, {
+            body: data,
+        });
 
-    if (token) {
-        const { data: user } = await client(`${backendUrl}/token/refresh`, { token });
+        if (token) {
+            const { data: user } = await client(`${backendUrl}/token/refresh`, { token });
 
-        localStorage.setItem("user", JSON.stringify({ ...user, token }));
+            localStorage.setItem("user", JSON.stringify({ ...user, token }));
 
-        return { ...user, token };
-    }
+            return { ...user, token };
+        }
     } catch (err) {
     console.log(err);
     }

@@ -1,37 +1,31 @@
 {
-  "name": "iwari-fe",
+  "name": "iware-fe",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://iwariapi-test.herokuapp.com",
   "dependencies": {
-    "@reduxjs/toolkit": "^1.7.1",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.25.0",
-    "node-sass": "^6.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
-    "react-toastify": "^8.1.0",
-    "redux": "^4.1.2",
-    "sass": "^1.43.2",
-    "styled-components": "^5.3.1",
-    "video.js": "^7.17.0",
-    "web-vitals": "^1.1.2"
+    "@reduxjs/toolkit": "^1.4.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-toastify": "^6.0.8",
+    "styled-components": "^5.1.1",
+    "video.js": "^7.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -44,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.49.7"
   }
 }
