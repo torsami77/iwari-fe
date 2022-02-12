@@ -2,9 +2,11 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import Search from '../Gadgets/Search';
 import "./Navbar.css";
+import { useHistory } from 'react-router-dom';
 
 
 const Navbar = () => {
+    const history = useHistory();
     return (
         <div className="nav">
             <div className="logo flex-row">
@@ -16,7 +18,7 @@ const Navbar = () => {
 
             <Search />
 
-            <Link to="" className="link-btn">
+            <Link to="/register" className="link-btn" onClick={() => history.push("/login")}>
                 Sign Up
             </Link>
         </div>
