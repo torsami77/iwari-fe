@@ -56,13 +56,13 @@ const Home = () => {
                             <h2>Recommended for You</h2>
                         </div>
                         <VideoGrid>
-                            <Link to="">
+                            <Link to={`/watch/:id`}>
                                 <Video/>
                             </Link>
-                            <Link to="">
+                            <Link to={`/watch/:id`}>
                                 <Video/>
                             </Link>
-                            <Link to="">
+                            <Link to={`/watch/:id`}>
                                 <Video/>
                             </Link>
                         </VideoGrid>
@@ -72,16 +72,16 @@ const Home = () => {
                             <h2>Discover</h2>
                         </div>
                         <Grid>
-                            <Link to="">
+                            <Link to={`/category/:cat`}>
                                 <Card color="rgba(70, 210, 122, 0.75)" cat="Educational"/>
                             </Link>
-                            <Link to="">
+                            <Link to={`/category/:cat`}>
                                 <Card color="rgba(74, 211, 231, 0.75)" cat="Drama"/>
                             </Link>
-                            <Link to="">
+                            <Link to={`/category/:cat`}>
                                 <Card color="rgba(241, 90, 151, 0.75)" cat="History"/>
                             </Link>
-                            <Link to="">
+                            <Link to={`/category/:cat`}>
                                 <Card color="rgba(248, 199, 80, 0.75)" cat="TV Shows"/>
                             </Link>
                         </Grid>
@@ -91,16 +91,16 @@ const Home = () => {
                             <h2>Trending</h2>
                         </div>
                         <Grid>
-                            <Link to="">
+                            <Link to={`/watch/:id`}>
                                 <VideoTrends/>
                             </Link>
-                            <Link to="">
+                            <Link to={`/watch/:id`}>
                                 <VideoTrends/>
                             </Link>
-                            <Link to="">
+                            <Link to={`/watch/:id`}>
                                 <VideoTrends/>
                             </Link>
-                            <Link to="">
+                            <Link to={`/watch/:id`}>
                                 <VideoTrends/>
                             </Link>
                         </Grid>
