@@ -42,6 +42,9 @@ const userSlice = createSlice({
         },
     },
     extraReducers: {
+        [login.fulfilled]: (state, action) => {
+            state.data = action.payload || {};
+        },
         [signup.fulfilled]: (state, action) => {
             state.data = action.payload || {};
         },
