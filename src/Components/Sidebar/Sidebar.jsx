@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import { HomeIcon } from '../Icons/Home';
+import { HomeIcon, LibIcon, SubIcon, TrendingIcon, WatchIcon } from '../Icons/Home';
 import { FriendsCard } from '../Cards/Cards';
 // import {Home} from "@styled-icons/boxicons-regular/Home";
 import "./Sidebar.scss"
@@ -27,7 +27,7 @@ const Sidebar = () => {
             >
                 <div className="icon">
                     {/* Icon */}
-                    <HomeIcon/>
+                    <TrendingIcon/>
                     <span>Live</span>
                 </div>
             </NavLink>
@@ -38,7 +38,7 @@ const Sidebar = () => {
             >
                 <div className="icon">
                     {/* Icon */}
-                    <HomeIcon/>
+                    <SubIcon/>
                     <span>Category</span>
                 </div>
             </NavLink>
@@ -49,7 +49,7 @@ const Sidebar = () => {
             >
                 <div className="icon">
                     {/* Icon */}
-                    <HomeIcon/>
+                    <LibIcon/>
                     <span>New/Popular</span>
                 </div>
             </NavLink>
@@ -60,7 +60,7 @@ const Sidebar = () => {
             >
                 <div className="icon">
                     {/* Icon */}
-                    <HomeIcon/>
+                    <WatchIcon/>
                     <span>My List</span>
                 </div>
             </NavLink>
