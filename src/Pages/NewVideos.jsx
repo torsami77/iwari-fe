@@ -26,4 +26,4 @@ const NewVideos = () => {
     )
 }
 
-export default Watch;
+export default NewVideos;

@@ -26,4 +26,4 @@ const Category = () => {
     )
 }
 
-export default Watch;
+export default Category;

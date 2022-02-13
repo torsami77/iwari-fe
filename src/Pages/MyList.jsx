@@ -26,4 +26,4 @@ const MyList = () => {
     )
 }
 
-export default Watch;
+export default MyList;
