@@ -4,6 +4,10 @@
   "private": true,
   "proxy": "https://iwariapi-test.herokuapp.com",
   "home": "https://torsami77.github.io",
+  "engines": {
+    "npm": "6.14.16",
+    "node": "14.19.0"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
