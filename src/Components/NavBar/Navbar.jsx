@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import Search from '../Gadgets/Search';
 import "./Navbar.css";
 import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
-import { NotificationIcon, UploadIcon } from '../Icons/Home';
+import { NotificationIcon, UploadIcon, HamburgerIcon } from '../Icons/Home';
 import Avatar from '../../Styles/Default/Avatar';
 import image from "../../assets/img.jpg"
+import { openSidebar, closeSidebar } from "../../Redux/Navbar/Sidebar";
 
 const Wrapper = styled.div`
   position: fixed;
@@ -85,11 +86,21 @@ const Wrapper = styled.div`
 `;
 
 const Navbar = () => {
-    const history = useHistory();
+    const dispatch = useDispatch();
+
+    const { sidebar: open } = useSelector((state) => state.Sidebar);
+
+    const handleToggleSidebar = () => {
+      console.log("Clicked", open);
+      open ? dispatch(closeSidebar()) : dispatch(openSidebar());
+    };
     return (
         <Wrapper>
             <div className="logo flex-row">
-                <div className="toggler"></div>
+                <HamburgerIcon
+                  className="toggle-navhandler"
+                  onClick={handleToggleSidebar}
+                />
                 <span>
                     <Link to="/" className="txt-logo" style={{ color: "white"}}>Logo</Link>
                 </span>

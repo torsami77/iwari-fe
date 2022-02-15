@@ -1,14 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import { useDispatch, useSelector } from "react-redux";
 import { HomeIcon, LibIcon, SubIcon, TrendingIcon, WatchIcon } from '../Icons/Home';
 import { FriendsCard } from '../Cards/Cards';
 // import {Home} from "@styled-icons/boxicons-regular/Home";
-import "./Sidebar.scss"
+// import "./Sidebar.scss"
+import {SideWrapper} from "./style";
 
 const Sidebar = () => {
+    const dispatch = useDispatch();
+
+    
     return (
-        <div className="wrapper">
+        <SideWrapper>
             <NavLink 
                 exact
                 to="/"
@@ -81,7 +85,7 @@ const Sidebar = () => {
                     <FriendsCard/>
                 </div>
             </div>
-        </div>
+        </SideWrapper>
     )
 }
 
