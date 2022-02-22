@@ -100,31 +100,6 @@ const Signup = ({ setAuth }) => {
   const password = useInput("");
   const confirm_password = useInput("");
 
-  // const trySubmit = async() => {
-  //   const body = {
-  //     username: "Pevier25",
-  //     email: "Pevier25@gmail.com",
-  //     password: "@Password",
-  //     confirm_password: "@Password"
-  //   }
-
-  //   try {
-  //     console.log(body);
-  //     const { data } = await axios.post("https://iwariapi-test.herokuapp.com/api/user/signup/", body, {
-  //       headers: {
-  //         "Content-Type": "application/json"
-  //       }
-  //     })
-  //     console.log(data);
-  //   } catch(err) {
-  //     console.log(err.response);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   trySubmit()
-  // }, [])
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
