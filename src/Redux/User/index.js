@@ -2,9 +2,9 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import { authenticate } from "../../utils";
 
 export const login = createAsyncThunk(
-    "user/signin",
+    "signin",
     async ({ payload, clearForm }) => {
-        const user = await authenticate("user/signin", payload);
+        const user = await authenticate("user/signin/", payload);
 
         if (user.token) {
             clearForm();
@@ -14,11 +14,11 @@ export const login = createAsyncThunk(
 );
 
 export const signup = createAsyncThunk(
-    "user/signup",
+    "signup",
     async({payload, clearForm}) => {
-        const user = await authenticate("user/signup", payload);
+        const user = await authenticate("user/signup/", payload);
 
-        if(user.token) {
+        if(user) {
             clearForm();
             return user;
         }

@@ -1,8 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-// AUTH ROUTES
-import Login from '../Components/Auth/Login';
-import Signup from '../Components/Auth/SignUp';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 // DEFAULT ROUTES
 import Home from './Home';
 import "../Styles/Global/Styles.css";

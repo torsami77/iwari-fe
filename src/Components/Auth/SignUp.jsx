@@ -1,10 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { toast } from 'react-toastify';
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import useInput from "../../hooks/input";
-import { signup } from "../../Redux/User"; 
-import axios from "axios";
+import { signup } from "../../Redux/User";
 import { useHistory } from 'react-router-dom';
 
 export const StyledAuth = styled.div`
@@ -101,30 +100,30 @@ const Signup = ({ setAuth }) => {
   const password = useInput("");
   const confirm_password = useInput("");
 
-  const trySubmit = async() => {
-    const body = {
-      username: "Xavier24",
-      email: "xavier@gmail.com",
-      password: "123456",
-      confirm_password: "123456"
-    }
+  // const trySubmit = async() => {
+  //   const body = {
+  //     username: "Pevier25",
+  //     email: "Pevier25@gmail.com",
+  //     password: "@Password",
+  //     confirm_password: "@Password"
+  //   }
 
-    try {
-      console.log(body);
-      const { data } = await axios.post("https://iwariapi-test.herokuapp.com/api/user/signup/", body, {
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      console.log(data);
-    } catch(err) {
-      console.log(err);
-    }
-  }
+  //   try {
+  //     console.log(body);
+  //     const { data } = await axios.post("https://iwariapi-test.herokuapp.com/api/user/signup/", body, {
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       }
+  //     })
+  //     console.log(data);
+  //   } catch(err) {
+  //     console.log(err.response);
+  //   }
+  // }
 
-  useEffect(() => {
-    trySubmit()
-  }, [])
+  // useEffect(() => {
+  //   trySubmit()
+  // }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -136,6 +135,12 @@ const Signup = ({ setAuth }) => {
       !confirm_password.value.trim()
     ) {
       return toast.error("Please fill in all the fields");
+    }
+    
+    //eslint-disable-next-line
+    var pattern = new RegExp("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    if(pattern.exec(password.value)) {
+      return toast.error("Password must contain 8 chars e.g Password@")
     }
 
     if (password.value !== confirm_password.value) {
@@ -156,7 +161,6 @@ const Signup = ({ setAuth }) => {
       email: email.value,
       password: password.value,
       confirm_password: confirm_password.value,
-      isCreator: true
     };
 
     const clearForm = () => {

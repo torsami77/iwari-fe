@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from "./Login";
 import SignUp from "./SignUp";
 
 const Auth = () => {
-    const [auth, setAuth] = useState("LOGIN");
+    // const [auth, setAuth] = useState("LOGIN");
     // const history = useHistory();
 
     // if (auth === "SIGNUP") {
